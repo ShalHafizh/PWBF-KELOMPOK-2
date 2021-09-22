@@ -14,5 +14,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('beranda');
+});
+
+Route::get('/beranda', function () {
+    return view('beranda');
+});
+
+Route::get('/produk', function () {
+    return view('produk');
+});
+
+Route::get('/about', function () {
+    return  view('about');
+});
+
+Route::get('/contact', function () {
+    return view('contact', [
+        "nama1" => "1. Muhammad Faishal Hafizh Mumtaz Galip (152011513002)",
+        "nama2" => "2. Fariz Rahman (152011513028)",
+        "image1" => "Ishal.jpg",
+        "image2" => "Tower.jpg"
+    ]);
 });

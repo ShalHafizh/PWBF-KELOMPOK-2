@@ -1,5 +1,5 @@
 @extends('layouts.main')
     
     @section('container')
-    <h1>About Sistem Informasi Pengadaan Barang</h1>
+    <h1>Produk & Layanan</h1>
     @endsection

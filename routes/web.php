@@ -14,23 +14,38 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('beranda');
+    return view('login', [
+        "title" => "Home"
+    ]);
+});
+
+Route::get('/login', function () {
+    return view('login', [
+        "title" => "Home"
+    ]);
 });
 
 Route::get('/beranda', function () {
-    return view('beranda');
+    return view('beranda', [
+        "title" => "Beranda"
+    ]);
 });
 
-Route::get('/produk', function () {
-    return view('produk');
+Route::get('/sipb', function () {
+    return view('sipb', [
+        "title" => "Pengadaan Barang"
+    ]);
 });
 
 Route::get('/about', function () {
-    return  view('about');
+    return  view('about', [
+        "title" => "About"
+    ]);
 });
 
 Route::get('/contact', function () {
     return view('contact', [
+        "title" => "Contact",
         "nama1" => "1. Muhammad Faishal Hafizh Mumtaz Galip (152011513002)",
         "nama2" => "2. Fariz Rahman (152011513028)",
         "image1" => "Ishal.jpg",

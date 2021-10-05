@@ -28,17 +28,17 @@
                 <a class="nav-link {{ ($title === "Beranda") ? 'active' : '' }}" aria-current="page" href="/beranda">Beranda</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{ ($title === "Pengadaan Barang") ? 'active' : '' }}" href="/sipb">SIPB</a>
+                <a class="nav-link {{ ($title === "Pengadaan Barang") ? 'active' : '' }}" href="/produk">Produk</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Layanan
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="/sipb">Action</a></li>
-                  <li><a class="dropdown-item" href="/sipb">Another action</a></li>
+                  <li><a class="dropdown-item" href="/produk">Action</a></li>
+                  <li><a class="dropdown-item" href="/produk">Another action</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="/sipb">Something else here</a></li>
+                  <li><a class="dropdown-item" href="/produk">Something else here</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -83,8 +83,8 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/sipb">Static Navigation</a>
-                                    <a class="nav-link" href="/sipb">Light Sidenav</a>
+                                    <a class="nav-link" href="/produk">Static Navigation</a>
+                                    <a class="nav-link" href="/produk">Light Sidenav</a>
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">

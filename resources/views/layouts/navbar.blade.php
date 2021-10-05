@@ -24,17 +24,17 @@
                 <a class="nav-link {{ ($title === "Beranda") ? 'active' : '' }}" aria-current="page" href="/beranda">Beranda</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{ ($title === "Pengadaan Barang") ? 'active' : '' }}" href="/sipb">SIPB</a>
+                <a class="nav-link {{ ($title === "Pengadaan Barang") ? 'active' : '' }}" href="/produk">Produk</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle {{ ($title === "Pengadaan Barang") ? 'active' : '' }}" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Layanan
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="/sipb">Action</a></li>
-                  <li><a class="dropdown-item" href="/sipb">Another action</a></li>
+                  <li><a class="dropdown-item" href="/produk">Action</a></li>
+                  <li><a class="dropdown-item" href="/produk">Another action</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="/sipb">Something else here</a></li>
+                  <li><a class="dropdown-item" href="/produk">Something else here</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -69,6 +69,7 @@
       </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    
 
   </body>
 </html>

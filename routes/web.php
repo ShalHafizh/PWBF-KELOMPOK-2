@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ControllerPWBF2;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,42 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('login', [
-        "title" => "Home"
-    ]);
-});
+Route::get('/', [LoginController::class, 'login']);
 
-Route::get('/login', function () {
-    return view('login', [
-        "title" => "Home"
-    ]);
-});
+Route::get('/login', [LoginController::class, 'login']);
 
-Route::get('/beranda', function () {
-    return view('beranda', [
-        "title" => "Beranda"
-    ]);
-});
+Route::get('/beranda', [ControllerPWBF2::class, 'beranda']);
 
-Route::get('/sipb', function () {
-    return view('sipb', [
-        "title" => "Pengadaan Barang"
-    ]);
-});
+Route::get('/produk', [ControllerPWBF2::class, 'produk']);
 
-Route::get('/about', function () {
-    return  view('about', [
-        "title" => "About"
-    ]);
-});
+Route::get('/about', [ControllerPWBF2::class, 'about']);
 
-Route::get('/contact', function () {
-    return view('contact', [
-        "title" => "Contact",
-        "nama1" => "1. Muhammad Faishal Hafizh Mumtaz Galip (152011513002)",
-        "nama2" => "2. Fariz Rahman (152011513028)",
-        "image1" => "Ishal.jpg",
-        "image2" => "Tower.jpg"
-    ]);
-});
+Route::get('/contact', [ControllerPWBF2::class, 'contact']);
+

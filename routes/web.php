@@ -25,5 +25,5 @@ Route::get('/produk', [ControllerPWBF2::class, 'produk']);
 
 Route::get('/about', [ControllerPWBF2::class, 'about']);
 
-Route::get('/contact', [ControllerPWBF2::class, 'contact'])
+Route::get('/contact', [ControllerPWBF2::class, 'contact']);
 

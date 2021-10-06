@@ -19,6 +19,7 @@ class CreateTableBarang extends Migration
             $table->integer('stok_barang');
             $table->integer('harga_beli_barang');
             $table->integer('harga_jual_barang');
+            $table->timestamps();
         });
     }
 

@@ -16,6 +16,7 @@ class CreateTableDetailPemesanan extends Migration
         Schema::create('table_detail_pemesanan', function (Blueprint $table) {
             $table->integer('jumlah_up');
             $table->integer('harga_up');
+            $table->timestamps();
         });
     }
 

@@ -18,6 +18,7 @@ class CreateTablePenerimaan extends Migration
             $table->date('tgl_terima');
             $table->integer('total_harga');
             $table->char('tatus_terima', 1);
+            $table->timestamps();
         });
     }
 

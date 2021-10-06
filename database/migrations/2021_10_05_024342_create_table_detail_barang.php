@@ -14,7 +14,7 @@ class CreateTableDetailBarang extends Migration
     public function up()
     {
         Schema::create('table_detail_barang', function (Blueprint $table) {
-           
+            $table->timestamps();
         });
     }
 

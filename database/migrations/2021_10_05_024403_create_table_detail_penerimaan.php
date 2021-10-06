@@ -17,6 +17,7 @@ class CreateTableDetailPenerimaan extends Migration
             $table->integer('harga_hs');
             $table->integer('jumlah_hs');
             $table->string('total_bayar', 200);
+            $table->timestamps();
         });
     }
 

@@ -17,6 +17,7 @@ class CreateTablePembayaran extends Migration
             $table->char('id_bayar', 5)->primary();
             $table->date('tgl_bayar');
             $table->string('total_bayar');
+            $table->timestamps();
         });
     }
 

@@ -8,7 +8,7 @@ use App\Models\Post;
 class ControllerPWBF2 extends Controller
 {
     public function beranda()
-    {
+    { 
         return view('beranda', [
             "title" => "Beranda"
         ]);
@@ -17,8 +17,7 @@ class ControllerPWBF2 extends Controller
     public function produk()
     {
         return view('produk', [
-            "title" => "Pengadaan Barang",
-            "posts" => Post::all()
+            "title" => "Pengadaan Barang"
         ]);
     }
 

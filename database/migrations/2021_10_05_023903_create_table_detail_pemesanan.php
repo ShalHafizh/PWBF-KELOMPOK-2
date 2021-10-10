@@ -14,6 +14,9 @@ class CreateTableDetailPemesanan extends Migration
     public function up()
     {
         Schema::create('table_detail_pemesanan', function (Blueprint $table) {
+            $table->id();
+            $table->foreignid('kode_barang');
+            $table->foreignid('id_pesan');
             $table->integer('jumlah_up');
             $table->integer('harga_up');
             $table->timestamps();

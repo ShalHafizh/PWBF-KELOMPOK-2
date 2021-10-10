@@ -14,6 +14,9 @@ class CreateTableDetailPenerimaan extends Migration
     public function up()
     {
         Schema::create('table_detail_penerimaan', function (Blueprint $table) {
+            $table->id();
+            $table->foreignid('id_terima');
+            $table->foreignid('kode_barang');
             $table->integer('harga_hs');
             $table->integer('jumlah_hs');
             $table->string('total_bayar', 200);

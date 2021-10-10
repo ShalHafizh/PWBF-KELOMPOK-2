@@ -14,6 +14,10 @@ class CreateTableDetailBarang extends Migration
     public function up()
     {
         Schema::create('table_detail_barang', function (Blueprint $table) {
+            $table->id();
+            $table->foreignid('id_warna');
+            $table->foreignid('kode_barang');
+            $table->foreignid('id_ukuran');
             $table->timestamps();
         });
     }

@@ -6,22 +6,23 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <link rel="stylesheet" href="css/background.css">
-    <title>SIPB | sign in</title>
+    <title>SIPB | {{ $title }}</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
 
     
 
     <!-- Bootstrap core CSS -->
-<link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+    
+
+    
     <!-- Custom styles for this template -->
     <link href="https://getbootstrap.com/docs/5.1/examples/sign-in/signin.css" rel="stylesheet">
   </head>
   <body class="text-center">
     
-    <div class="container">
 <main class="form-signin">
   <form>
     <h1 class="h3 mb-3 fw-normal">Sistem Informasi Pengadaan Barang</h1>
@@ -50,5 +51,7 @@
     
   </body>
 </html>
+
+
 
     

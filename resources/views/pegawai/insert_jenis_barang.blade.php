@@ -3,7 +3,7 @@
 @section('content')
 <main>
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Input Jenis Barang</h1>
+        <h1 class="mt-4">Tambahkan Jenis Barang</h1>
     </div>
     <form action = "{{ url('/create_jenis_barang_pegawai') }}" method = "post">
 	<input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">

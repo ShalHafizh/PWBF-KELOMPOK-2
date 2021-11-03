@@ -7,7 +7,7 @@
         <meta name="author" content="Colorlib">
         <meta name="keywords" content="Colorlib Templates">
 
-<title>Au Register Forms by Colorlib</title>
+<title>SIPB | Registrasi</title>
 
 <link href="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
 <link href="https://colorlib.com/etc/regform/colorlib-regform-4/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">

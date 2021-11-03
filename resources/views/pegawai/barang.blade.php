@@ -14,12 +14,13 @@
                     <table id="datatablesSimple">
                         <thead>
                             <tr>
-                            <th>ID Barang</th>
+                            <th>Kode Barang</th>
                             <th>Nama Barang</th>
                             <th>Stok</th>
                             <th>Harga Beli</th>
                             <th>Harga Jual</th>
                             <th>Jenis</th>
+                            <th>Pesan</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>
@@ -39,7 +40,10 @@
                                 if ($item->id_jb==3){echo "Pelengkap Pakaian";} 
                                 ?>
                             </td>
-                           =
+                            <td>
+                              <button class="btn btn-primary btn-sm">Pesan</button>
+                            </td>
+                            <td>
                               <a href="{{ url('/edit_barang_pegawai',$item->id) }}"><button type="submit" class="btn btn-info btn-sm")>edit</button>
                               </a>
                             </td>

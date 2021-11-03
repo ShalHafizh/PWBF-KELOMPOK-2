@@ -17,11 +17,7 @@ class BarangController extends Controller
         $table_barang1 = jenisBarang::all();
         return view('pegawai.barang', ['table_barang'=>$table_barang], ['table_barang1'=>$table_barang1]);
     }
-    public function tes($id)
-    {
-        $item = Barang::find($id);
-        return view('pegawai.tes');
-    }
+   
     public function insert()
     {
         $table_jenis_barang = jenisBarang::all();

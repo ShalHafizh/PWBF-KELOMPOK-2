@@ -14,7 +14,7 @@
 		</tr>
 		<tr>
 			<td colspan = '2'>
-			<input type = 'submit' value = "Input Data"/></td>
+			<input type = 'submit' value = "Tambahkan"/></td>
 		</tr>
 	</table>
 </form>

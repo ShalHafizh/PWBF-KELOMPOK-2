@@ -38,4 +38,14 @@ class ControllerPWBF2 extends Controller
             "image2" => "Tower.jpg"
         ]);
     }
+
+    public function forgot()
+    {
+        return view('forgot');
+    }
+
+    public function account()
+    {
+        return view('account');
+    }
 }

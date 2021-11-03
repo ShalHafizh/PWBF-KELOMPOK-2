@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> 
     <title>SIPB | {{ $title }}</title>
   </head>
   <body>
@@ -21,27 +20,16 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link {{ ($title === "Beranda") ? 'active' : '' }}" aria-current="page" href="/beranda">Beranda</a>
+                <a class="nav-link" aria-current="page" href="/beranda">Beranda</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{ ($title === "Pengadaan Barang") ? 'active' : '' }}" href="/produk">Produk</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle {{ ($title === "Pengadaan Barang") ? 'active' : '' }}" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Layanan
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="/produk">Action</a></li>
-                  <li><a class="dropdown-item" href="/produk">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="/produk">Something else here</a></li>
-                </ul>
+                <a class="nav-link" href="/homePegawai">Produk</a>
+             
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{ ($title === "About") ? 'active' : '' }}" href="/about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link {{ ($title === "Contact") ? 'active' : '' }}" href="/contact">Contact</a>
+                <a class="nav-link" href="/contact">Contact</a>
               </li>
             </ul>
             <!-- NavbarSearch-->

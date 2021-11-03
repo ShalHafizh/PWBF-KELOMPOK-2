@@ -14,6 +14,6 @@ class historyStock extends Model
     #RELASI
     public function modelbarang()
     {
-        return $this->belongsTo(modelbarang::class,'kode_bar','id');
+        return $this->belongsTo(Barang::class,'kode_bar','id');
     }
 }

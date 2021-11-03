@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableDetailPemesanan extends Migration
+class CreateDetailPemesanan extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class CreateTableDetailPemesanan extends Migration
      */
     public function up()
     {
-        Schema::create('table_detail_pemesanan', function (Blueprint $table) {
+        Schema::create('detail_pemesanan', function (Blueprint $table) {
             $table->id();
             $table->integer('jumlah_up');
             $table->integer('harga_up');
             $table->timestamps();
         });
 
-        Schema::table('table_detail_pemesanan', function (Blueprint $table) {
+        Schema::table('detail_pemesanan', function (Blueprint $table) {
             $table->foreignId('id_pesan')->constrained('table_pemesanan');
             $table->foreignId('kode_bar')->constrained('table_barang');
         });

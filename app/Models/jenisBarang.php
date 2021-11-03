@@ -14,6 +14,6 @@ class jenisBarang extends Model
     #RELASI
     public function modelbarang()
     {
-        return $this->hasMany(modelbarang::class,'id_jb','id');
+        return $this->hasMany(Barang::class,'id_jb','id');
     }
 }

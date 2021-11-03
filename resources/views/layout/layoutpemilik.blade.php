@@ -6,87 +6,77 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>SIPB | {{ $title }}</title>
+        <title> Dashboard </title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     </head>
     <body class="sb-nav-fixed">
-        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-primary">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <div class="container-fluid">
-            <a class="navbar-brand" href="/beranda">SIPB</a>
+            <a class="navbar-brand ps-3" href="index.html">Fancy Boutique</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link {{ ($title === "Beranda") ? 'active' : '' }}" aria-current="page" href="/beranda">Beranda</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link {{ ($title === "Pengadaan Barang") ? 'active' : '' }}" href="/produk">Produk</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Layanan
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="/produk">Action</a></li>
-                  <li><a class="dropdown-item" href="/produk">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="/produk">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link {{ ($title === "About") ? 'active' : '' }}" href="/about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link {{ ($title === "Contact") ? 'active' : '' }}" href="/contact">Contact</a>
-              </li>
-            </ul>
             <!-- Navbar Search-->
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
-            </div>
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+
             <!-- Navbar-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <p class="navbar-brand ps-3">Hello, 152011513019</p>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#!">Settings</a></li>
                         <li><a class="dropdown-item" href="#!">Activity Log</a></li>
                         <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="/login">Logout</a></li>
+                        <li><a class="dropdown-item" href="{{ url('/') }}">Logout</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-dark bg-dark" id="sidenavAccordion">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="/produk">Dashboard
+                            <a class="nav-link" href="{{ url('/homePemilik') }}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
                             </a>
+
+                            <!-- Div Interface -->
                             <div class="sb-sidenav-menu-heading">Interface</div>
+                            
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Layouts
+                                Data Master
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/produk">Static Navigation</a>
-                                    <a class="nav-link" href="/produk">Light Sidenav</a>
+                                    <a class="nav-link" href="{{ url('/databarang') }}">Data Barang</a>
                                 </nav>
                             </div>
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-align-left"></i></div>
+                                Data Transaksi 
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="{{ url('/input_pembayaran') }}">Input Pembayaran</a>
+                                </nav>
+                            </div>
+
+
+
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Pages
@@ -100,8 +90,9 @@
                                     </a>
                                     <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="/login">Login</a>
-                                            <a class="nav-link" href="/login">Register</a>
+                                            <a class="nav-link" href="login.html">Login</a>
+                                            <a class="nav-link" href="register.html">Register</a>
+                                            <a class="nav-link" href="password.html">Forgot Password</a>
                                         </nav>
                                     </div>
                                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
@@ -117,26 +108,26 @@
                                     </div>
                                 </nav>
                             </div>
-                            <div class="sb-sidenav-menu-heading">Others</div>
-                            <a class="nav-link" href="/about">
-                                About
+                            <div class="sb-sidenav-menu-heading">Addons</div>
+                            <a class="nav-link" href="charts.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Charts
                             </a>
-                            <a class="nav-link" href="/contact">
-                                Contact
+                            <a class="nav-link" href="tables.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Tables
                             </a>
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        Muhammad Faishal Hafizh
+                        Start Bootstrap
                     </div>
                 </nav>
             </div>
             <div id="layoutSidenav_content">
-              
-              <div class="container mt-5">
-                @yield('container')
-              </div>
+                
+@yield('content')
 
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
@@ -152,8 +143,7 @@
                 </footer>
             </div>
         </div>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
         <script src="assets/demo/chart-area-demo.js"></script>
@@ -162,14 +152,3 @@
         <script src="js/datatables-simple-demo.js"></script>
     </body>
 </html>
-
-
-    
-
-   
-
-      
-  
-
-    
-    

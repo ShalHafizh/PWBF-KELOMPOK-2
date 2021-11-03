@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.navbar')
     
     @section('container')
     <h1>Nama Anggota Kelompok</h1>

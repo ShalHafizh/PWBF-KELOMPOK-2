@@ -11,6 +11,12 @@ use Illuminate\Validation\Rule;
 
 class BarangController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index()
     {
         $table_barang = Barang::all();

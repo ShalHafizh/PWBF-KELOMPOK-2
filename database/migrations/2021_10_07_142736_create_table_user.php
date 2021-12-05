@@ -15,18 +15,10 @@ class CreateTableUser extends Migration
     {
         Schema::create('table_user', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_user', 40);
-            $table->string('alamat_user', 50);
-            $table->string('telp_user', 13);
-            $table->string('username', 20)->unique();
+            $table->string('name', 40);
             $table->string('email', 40);
-            $table->string('password', 20);
+            $table->string('password', 255);
             $table->timestamps();
-        });
-
-        Schema::table('table_user', function (Blueprint $table) {
-            $table->foreignId('id_kota')->constrained('table_kota');
-            $table->foreignId('id_role')->constrained('table_role');
         });
     }
 

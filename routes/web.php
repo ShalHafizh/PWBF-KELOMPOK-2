@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [LoginController::class, 'login']);
+Route::get('/', [ControllerPWBF2::class, 'beranda']);
 
 Route::get('/login', [LoginController::class, 'login']);
 
@@ -36,24 +36,24 @@ Route::get('/account', [ControllerPWBF2::class, 'account']);
 Route::get('/tes/{id}',       'App\Http\Controllers\BarangController@tes');
 
 
-//pegawai 
+//pegawai barang
 Route::get ('/homePegawai',                         'App\Http\Controllers\BarangController@index');
 Route::get ('/homePegawai1',                        'App\Http\Controllers\BarangController@index');
-//input barang baru
+//input barang baru untuk pegawai
 Route::post('/create_barang_pegawai',               'App\Http\Controllers\BarangController@create');
 Route::get ('/input_barang_pegawai',                'App\Http\Controllers\BarangController@insert');
-//update barang
+//update barang untuk pegawai
 Route::get('/edit_barang_pegawai/{id}',            'App\Http\Controllers\BarangController@edit');
 Route::get('/update_barang_pegawai/{id}',           'App\Http\Controllers\BarangController@update');
-//hapus barang
+//hapus barang untuk pegawai
 Route::get('/destroy_barang_pegawai/{id}',       'App\Http\Controllers\BarangController@destroy');
 
-//jenis barang
+//pegawai jenis barang
 Route::get('/Jenis_Barang_Pegawai',                 'App\Http\Controllers\JenisBarangController@Index');
-//input jenis barang baru
+//input jenis barang baru untuk pegawai
 Route::post('/create_jenis_barang_pegawai',         'App\Http\Controllers\JenisBarangController@create');
 Route::get('/input_jenis_barang_pegawai',           'App\Http\Controllers\JenisBarangController@insert');
-//update jenis barang
+//update jenis barang untuk pegawai
 Route::post('/edit_jenis_barang_pegawai/{id}',      'App\Http\Controllers\BarangController@edit');
 Route::get('/update_jenis_barang_pegawai/{id}',     'App\Http\Controllers\BarangController@update');
 //hapus jenis barang
@@ -64,7 +64,7 @@ Route::get('/pemesanan_pegawai',                    'App\Http\Controllers\Pemesa
 //input pemesanan 
 Route::post('/create_pemesanan_pegawai',             'App\Http\Controllers\PemesananController@create');
 Route::get('/input_pemesanan_pegawai',              'App\Http\Controllers\PemesananController@insert');
-//update jenis barang
+//update jenis barang untuk pegawai
 Route::post('/edit_pemesanan_pegawai/{id}',         'App\Http\Controllers\PemesananController@edit');
 Route::get('/update_pemesanan_pegawai/{id}',        'App\Http\Controllers\PemesananController@update');
 //hapus pemesanan
@@ -75,7 +75,7 @@ Route::get('/User_pegawai',                     'App\Http\Controllers\UserContro
 //input User 
 Route::post('/create_User_pegawai',              'App\Http\Controllers\UserController@create');
 Route::get('/input_User_pegawai',               'App\Http\Controllers\UserController@insert');
-//update user
+//update user untuk pegawai
 Route::post('/edit_User_pegawai/{id}',          'App\Http\Controllers\UserController@edit');
 Route::get('/update_User_pegawai/{id}',         'App\Http\Controllers\UserController@update');
 //hapus User
@@ -86,7 +86,7 @@ Route::get('/Warna_pegawai',                    'App\Http\Controllers\WarnaContr
 //input Warna 
 Route::post('/create_Warna_pegawai',             'App\Http\Controllers\WarnaController@create');
 Route::get('/input_Warna_pegawai',              'App\Http\Controllers\WarnaController@insert');
-//update warna 
+//update warna untuk pegawai
 Route::post('/edit_Warna_pegawai/{id}',         'App\Http\Controllers\WarnaController@edit');
 Route::get('/update_Warna_pegawai/{id}',        'App\Http\Controllers\WarnaController@update');
 //hapus Warna
@@ -97,7 +97,7 @@ Route::get('/Ukuran_pegawai',                   'App\Http\Controllers\UkuranCont
 //input Ukuran 
 Route::post('/create_Ukuran_pegawai',                'App\Http\Controllers\UkuranController@create');
 Route::get('/input_Ukuran_pegawai',             'App\Http\Controllers\UkuranController@insert');
-//update ukuran
+//update ukuran untuk pegawai
 Route::post('/edit_Ukuran_pegawai/{id}',            'App\Http\Controllers\UkuranController@edit');
 Route::get('/update_Ukuran_pegawai/{id}',       'App\Http\Controllers\UkuranController@update');
 //hapus Ukuran
@@ -108,7 +108,7 @@ Route::get('/Kota_pegawai',                 'App\Http\Controllers\KotaController
 //input Kota 
 Route::post('/create_Kota_pegawai',              'App\Http\Controllers\KotaController@create');
 Route::get('/input_Kota_pegawai',               'App\Http\Controllers\KotaController@insert');
-//update Kota 
+//update Kota untuk pegawai
 Route::post('/edit_Kota_pegawai/{id}',          'App\Http\Controllers\KotaController@edit');
 Route::get('/update_Kota_pegawai/{id}',     'App\Http\Controllers\KotaController@update');
 //hapus Kota
@@ -119,7 +119,7 @@ Route::get('/Role_pegawai',                 'App\Http\Controllers\RoleController
 //input Role 
 Route::post('/create_Role_pegawai',              'App\Http\Controllers\RoleController@create');
 Route::get('/input_Role_pegawai',               'App\Http\Controllers\RoleController@insert');
-//update Role
+//update Role untuk pegawai
 Route::post('/edit_Role_pegawai/{id}',          'App\Http\Controllers\RoleController@edit');
 Route::get('/update_Role_pegawai/{id}',     'App\Http\Controllers\RoleController@update');
 //hapus Role
@@ -130,7 +130,7 @@ Route::get('/Supplier_pegawai',                 'App\Http\Controllers\SupplierCo
 //input Supplier 
 Route::post('/create_Supplier_pegawai',              'App\Http\Controllers\SupplierController@create');
 Route::get('/input_Supplier_pegawai',               'App\Http\Controllers\SupplierController@insert');
-//update Supplier
+//update Supplier untuk pegawai
 Route::post('/edit_Supplier_pegawai/{id}',          'App\Http\Controllers\SupplierController@edit');
 Route::get('/update_Supplier_pegawai/{id}',     'App\Http\Controllers\SupplierController@update');
 //hapus Supplier
@@ -141,7 +141,7 @@ Route::get('/Penerimaan_pegawai',                   'App\Http\Controllers\Peneri
 //input Penerimaan 
 Route::post('/create_Penerimaan_pegawai',                'App\Http\Controllers\PenerimaanController@create');
 Route::get('/input_Penerimaan_pegawai',             'App\Http\Controllers\PenerimaanController@insert');
-//update Penerimaan
+//update Penerimaan untuk pegawai
 Route::post('/edit_Penerimaan_pegawai/{id}',            'App\Http\Controllers\PenerimaanController@edit');
 Route::get('/update_Penerimaan_pegawai/{id}',       'App\Http\Controllers\PenerimaanController@update');
 //hapus Penerimaan
@@ -152,7 +152,7 @@ Route::get('/pembayaran_pegawai',                   'App\Http\Controllers\Pembay
 //input Pembayaran 
 Route::post('/create_Pembayaran_pegawai',                'App\Http\Controllers\PembayaranController@create');
 Route::get('/input_Pembayaran_pegawai',             'App\Http\Controllers\PembayaranController@insert');
-//update Pembayaran 
+//update Pembayaran untuk pegawai
 Route::post('/edit_Pembayaran_pegawai/{id}',            'App\Http\Controllers\PembayaranController@edit');
 Route::get('/update_Pembayaran_pegawai/{id}',       'App\Http\Controllers\PembayaranController@update');
 //hapus Pembayaran
@@ -163,7 +163,7 @@ Route::get('/HistoryStock_pegawai',                 'App\Http\Controllers\Histor
 //input HistoryStock 
 Route::post('/create_HistoryStock_pegawai',              'App\Http\Controllers\HistoryStockController@create');
 Route::get('/input_HistoryStock_pegawai',               'App\Http\Controllers\HistoryStockController@insert');
-//update HistoryStock
+//update HistoryStock untuk pegawai
 Route::post('/edit_HistoryStock_pegawai/{id}',          'App\Http\Controllers\HistoryStockController@edit');
 Route::get('/update_HistoryStock_pegawai/{id}',     'App\Http\Controllers\HistoryStockController@update');
 //hapus HistoryStock
@@ -174,11 +174,6 @@ Route::get('/destroy_HistoryStock_pegawai/{id}',        'App\Http\Controllers\Hi
 Route::get('/homePemilik',                          'App\Http\Controllers\homePemilikController@Index');
 Route::get('/databarang',                           'App\Http\Controllers\homePemilikController@barang');
 
+Auth::routes();
 
-
-
-
-
-
-
-
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

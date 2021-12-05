@@ -4,7 +4,7 @@
     <main>
         <div class="container-fluid px-4">
             <h1 class="mt-4">Barang</h1>
-            <a href="{{ url('/input_barang_pegawai') }}"><button class="btn btn-primary btn-sm" style="float: left">Tambahkan Barang</button></a><br><br>
+            <a href="{{ url('/input_barang_pegawai') }}"><button class="btn btn-primary btn-sm" style="float: left">Input Barang</button></a><br><br>
             <div class="card mb-4">
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
@@ -20,7 +20,6 @@
                             <th>Harga Beli</th>
                             <th>Harga Jual</th>
                             <th>Jenis</th>
-                            <th>Pesan</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>
@@ -35,14 +34,12 @@
                             <td>{{ $item->harga_jual_bar }}</td>
                             <td>
                                 <?php 
-                                if ($item->id_jb==1){echo "Pakaian";} 
-                                if ($item->id_jb==2){echo "Bahan Pakaian";} 
-                                if ($item->id_jb==3){echo "Pelengkap Pakaian";} 
+                                if ($item->id_jb==1){echo "Baju";} 
+                                if ($item->id_jb==2){echo "Celana";} 
+                                if ($item->id_jb==3){echo "Topi";} 
                                 ?>
                             </td>
-                            <td>
-                              <button class="btn btn-primary btn-sm">Pesan</button>
-                            </td>
+                           
                             <td>
                               <a href="{{ url('/edit_barang_pegawai',$item->id) }}"><button type="submit" class="btn btn-info btn-sm")>edit</button>
                               </a>
